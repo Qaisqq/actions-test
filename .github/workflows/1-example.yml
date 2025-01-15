@@ -15,13 +15,3 @@ jobs:
              echo "action test"
              ls -ltra
              cat README.md
-
-      - name: generate some ascii
-        run: cowsay -f dragon "boooo" >> sickart.txt
-
-    #   - name: List Files
-    #     run: ls
-
-    #   - name: Read File
-    #     run: cat README.md
-

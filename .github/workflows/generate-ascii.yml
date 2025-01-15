@@ -1,0 +1,27 @@
+name: Generate Ascii
+
+on:
+  push:
+
+jobs:
+  ascii_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install Cowsay Program
+        run: sudo apt-get install cowsay -y
+
+      - name: generate some ascii
+        run: cowsay -f dragon "boooo" >> sickart.txt
+
+      - name: Test FIle exists
+        run: grep -i "sickart" sickart.txt
+
+      - name: Read File
+        run: cat sickart.txt
+
+      - name: list files
+        run: ls -ltra
+
