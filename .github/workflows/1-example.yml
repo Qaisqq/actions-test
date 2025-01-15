@@ -1,0 +1,18 @@
+name: Workflow Test
+
+on:
+  push:
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: First Action
+        run: echo "action test"
+
+      - name: List Files
+        run: ls
+
+      - name: Read File
+        run: cat README.md
