@@ -17,7 +17,7 @@ jobs:
         run: cowsay -f dragon "boooo" >> sickart.txt
 
       - name: Test FIle exists
-        run: grep -i "sickart" sickart.txt
+        run: grep -i "dragon" sickart.txt
 
       - name: Read File
         run: cat sickart.txt
