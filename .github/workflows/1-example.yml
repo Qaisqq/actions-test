@@ -10,11 +10,18 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v4
 
-      - name: First Action
-        run: echo "action test"
+      - name: list and read files
+        run: |
+             echo "action test"
+             ls -ltra
+             cat README.md
 
-      - name: List Files
-        run: ls
+      - name: generate some ascii
+        run: cowsay -f dragon "boooo" >> sickart.txt
 
-      - name: Read File
-        run: cat README.md
+    #   - name: List Files
+    #     run: ls
+
+    #   - name: Read File
+    #     run: cat README.md
+
